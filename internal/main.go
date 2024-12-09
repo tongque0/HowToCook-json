@@ -13,7 +13,7 @@ var simpleParse recipe.ParseRecipe[simpletype.Simpletype] = &simpletype.Simplety
 
 func main() {
 	//查找
-	recipePaths, err := file.GetAllRecipePaths("../dishes")
+	recipePaths, err := file.GetAllRecipePaths("./dishes")
 	if err != nil {
 		fmt.Printf("%v", err)
 	}

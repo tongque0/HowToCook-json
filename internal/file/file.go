@@ -1,7 +1,6 @@
 package file
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -58,7 +57,7 @@ func GetRecipeGetCategory(path string) string {
 	normalizedPath := strings.ReplaceAll(dir, `\`, `/`)
 	basepath := strutil.After(normalizedPath, "/dishes/")
 	categorypath := strutil.Before(basepath, "/")
-	fmt.Println(categorypath)
+
 	return categorypath
 }
 func GetGithubImagePath(path string) ([]string, error) {
