@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/duke-git/lancet/convertor"
-	"github.com/duke-git/lancet/fileutil"
-	"github.com/duke-git/lancet/strutil"
+	"github.com/duke-git/lancet/v2/convertor"
+	"github.com/duke-git/lancet/v2/fileutil"
+	"github.com/duke-git/lancet/v2/strutil"
 )
 
 func GetAllRecipePaths(root string) ([]string, error) {
