@@ -1,0 +1,26 @@
+name: Clone Public Repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  clone-public-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 2. 克隆公开的目标仓库
+    - name: Clone Public Repository
+      run: |
+        git clone https://github.com/Anduin2017/HowToCook.git target-repo
+        cd target-repo
+        ls -la
+
+    - name: Process Files
+      run: |
+        cd target-repo
+        # 在这里运行您的程序
+        echo "Processing files in target-repo..."
+        # 示例：输出 README.md 内容
+        cat README.md
