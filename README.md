@@ -10,7 +10,15 @@
 
 ## 使用说明
 
-直接下载需要文件即可
+直接下载需要文件，执行即可
+
+```
+./HowToCook-json <howtocook的dishes文件夹路径> <转换输出文件夹路径>
+```
+例如
+```
+./HowToCook-json /tmp/HowToCook/dish ./
+```
 
 ## 格式转换
 
