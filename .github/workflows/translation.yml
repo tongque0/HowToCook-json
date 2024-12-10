@@ -1,4 +1,4 @@
-name: Clone Public Repository
+name: Clone and Process Repository
 
 on:
   push:
@@ -6,21 +6,21 @@ on:
       - main
 
 jobs:
-  clone-public-repo:
+  clone-and-process:
     runs-on: ubuntu-latest
 
     steps:
-    # 2. 克隆公开的目标仓库
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
     - name: Clone Public Repository
       run: |
-        git clone https://github.com/Anduin2017/HowToCook.git target-repo
-        cd target-repo
-        ls -la
+        git clone https://github.com/Anduin2017/HowToCook.git /tmp/target-repo
 
-    - name: Process Files
+    - name: Translation Files
       run: |
-        cd target-repo
-        # 在这里运行您的程序
-        echo "Processing files in target-repo..."
-        # 示例：输出 README.md 内容
-        cat README.md
+        echo "working directory ls /tmp/target-repo"
+        ls /tmp/target-repo
+        echo "working directory ls"
+        ls
+
