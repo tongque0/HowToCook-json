@@ -1,7 +1,6 @@
 package simpletype
 
 import (
-	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -34,7 +33,6 @@ func (r *Simpletype) FileToRecipeType(name string) (Simpletype, error) {
 	simpleRecipe := parseMarkdown(recipeContent)
 
 	simpleRecipe.Category = file.GetRecipeGetCategory(name)
-	fmt.Println(simpleRecipe.Category)
 	simpleRecipe.Image, err = file.GetGithubImagePath(name)
 	if err != nil {
 		log.Fatalf("无法获取图片: %v", err)
