@@ -23,4 +23,3 @@ jobs:
         chmod +x ./bin/HowToCook-json_linux_amd64_v1/HowToCook-json
         ./bin/HowToCook-json_linux_amd64_v1/HowToCook-json /tmp/target-repo/dishes ../json
         ls
-        ls ./

@@ -7,6 +7,7 @@
 *.so
 *.dylib
 /internal/dist
+/dishes
 # Test binary, built with `go test -c`
 *.test
 
