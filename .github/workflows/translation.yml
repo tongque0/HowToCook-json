@@ -2,7 +2,8 @@ name: Clone and Process Repository
 
 on:
   push:
-    - main
+    branches:
+      - master
   schedule:
     - cron: '0 0 * * *' # 每天 UTC 时间 00:00 运行一次
 jobs:
