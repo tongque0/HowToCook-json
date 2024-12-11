@@ -19,8 +19,6 @@ jobs:
 
     - name: Translation Files
       run: |
-        echo "working directory ls /tmp/target-repo"
-        ls /tmp/target-repo
-        echo "working directory ls"
         ls
-
+        ./bin/HowToCook-json_linux_amd64_v1/HowToCook-json /tmp/target-repo/dishes ../json
+        ls ./json
