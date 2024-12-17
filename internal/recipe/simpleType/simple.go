@@ -79,14 +79,26 @@ func parseMarkdown(recipeContent []byte) Simpletype {
 					ingredient := strings.TrimPrefix(line, "- ")
 					recipe.Ingredients = append(recipe.Ingredients, ingredient)
 				}
+				if strings.HasPrefix(line, "* ") {
+					ingredient := strings.TrimPrefix(line, "* ")
+					recipe.Ingredients = append(recipe.Ingredients, ingredient)
+				}
 			case "calculations":
 				if strings.HasPrefix(line, "- ") {
 					calculations := strings.TrimPrefix(line, "- ")
 					recipe.Calculations = append(recipe.Calculations, calculations)
 				}
+				if strings.HasPrefix(line, "* ") {
+					calculations := strings.TrimPrefix(line, "* ")
+					recipe.Calculations = append(recipe.Calculations, calculations)
+				}
 			case "steps":
 				if strings.HasPrefix(line, "- ") {
 					step := strings.TrimPrefix(line, "- ")
+					recipe.Steps = append(recipe.Steps, step)
+				}
+				if strings.HasPrefix(line, "* ") {
+					step := strings.TrimPrefix(line, "* ")
 					recipe.Steps = append(recipe.Steps, step)
 				}
 			case "notes":
